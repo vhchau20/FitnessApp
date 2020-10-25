@@ -1,3 +1,8 @@
+import 'package:fitness_app/BenchPage.dart';
+import 'package:fitness_app/DeadliftPage.dart';
+import 'package:fitness_app/OverheadPage.dart';
+import 'package:fitness_app/TimerPage.dart';
+import 'package:fitness_app/SquatPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,29 +30,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(title: const Text('531 For Beginners')),
-      backgroundColor: Colors.blueGrey[800],
-      body: Column(
-        children: <Widget>[
-          // TODO: ExercisePanel
-          Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.red,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: const Text(
+            '531 For Beginners',
+          ),
+        ),
+        backgroundColor: Colors.white,
+        body: Column(
+          children: <Widget>[
+            // TODO: ExercisePanels
+            Expanded(
+              flex: 4,
+              child: Container(
+                // color: Colors.red,
+                child: PageView(
+                  children: [
+                    SquatPage(),
+                    DeadliftPage(),
+                    BenchPage(),
+                    OverheadPage()
+                  ],
                 ),
-              )),
-          // TODO: TimerPanel
-          Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.green,
-                ),
-              )),
-        ],
+              ),
+            ),
+            // TODO: TimerPanel
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.black,
+                child: TimerPage(),
+              ),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

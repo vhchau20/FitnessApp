@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-
-class DeadliftPage extends StatelessWidget {
+class TimerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange,
       child: Center(
         child: Text(
-          "Deadlifts",
+          "Timer",
           style: TextStyle(
+            color: Colors.red,
             fontSize: 50,
           ),
         ),
