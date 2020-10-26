@@ -1,8 +1,5 @@
-import 'package:fitness_app/BenchPage.dart';
-import 'package:fitness_app/DeadliftPage.dart';
-import 'package:fitness_app/OverheadPage.dart';
 import 'package:fitness_app/TimerPage.dart';
-import 'package:fitness_app/SquatPage.dart';
+import 'package:fitness_app/ExercisePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,10 +44,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 // color: Colors.red,
                 child: PageView(
                   children: [
-                    SquatPage(),
-                    DeadliftPage(),
-                    BenchPage(),
-                    OverheadPage()
+                    ExercisePage(
+                      exerciseName: "Squats",
+                    ),
+                    ExercisePage(
+                      exerciseName: "Bench",
+                    ),
+                    ExercisePage(
+                      exerciseName: "Deadlift",
+                    ),
+                    ExercisePage(
+                      exerciseName: "Overhead",
+                    ),
                   ],
                 ),
               ),
