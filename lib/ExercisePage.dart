@@ -37,12 +37,6 @@ class _ExercisePageState extends State<ExercisePage> {
                 SetTab(
                   setType: '1x5',
                 ),
-                Divider(),
-                SetTab(),
-                Divider(),
-                SetTab(),
-                Divider(),
-                SetTab(),
               ],
             ),
           ),
